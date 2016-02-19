@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title></title>
+	<% include ../partials/head %>
+</head>
+<body class="container">
+
+	<% include ../partials/header %>
+
+	<!-- thumbnails -->
+
+	<%= for (i=0, players.players.length, i=+1) { %>
+	<div class="row">
+		<div class="col-xs-6 col-md-3">
+			<a class="thumbnail">
+				<img src=<%=players.players.i.headshot %> >
+			</a>
+		</div>
+	</div>
+	} %>
+
+</body>
+</html>

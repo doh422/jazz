@@ -16,5 +16,9 @@ app.get('/players', function(req, res) {
 	});
 });
 
+app.get('/create', function(req, res) {
+	res.render('pages/create');
+});
+
 app.listen(port);
 console.log('Server running on ' + port);

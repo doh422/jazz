@@ -7,17 +7,23 @@
 
 	<% include ../partials/header %>
 
-	<!-- thumbnails -->
+	<h1>Roster</h1>
 
-	<%= for (i=0, players.players.length, i=+1) { %>
+	<!-- thumbnails -->
 	<div class="row">
+		<!-- player loop function -->
+		<% for (var i = 0; i < players.length; i++) { %>
+		
 		<div class="col-xs-6 col-md-3">
 			<a class="thumbnail">
-				<img src=<%=players.players.i.headshot %> >
+				<img src=<%=players[i].headshot %> >
 			</a>
 		</div>
+		<!-- loop close -->
+		<% } %>
+
 	</div>
-	} %>
+
 
 </body>
 </html>

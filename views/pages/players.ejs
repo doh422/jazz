@@ -9,18 +9,16 @@
 
 	<h1>Roster</h1>
 
-	<div class="spolight">
-		<div class="row">
-			<div class="col-md-6">
-				<a class="thumbnail">
-					<img src="..." id="focus1">
-				</a>
-			</div>
-			<div class="col-md-6">
-				<a class="thumbnail">
-					<img src="..." id="focus2">
-				</a>
-			</div>
+	<div class="row">
+		<div class="col-md-6">
+			<a class="thumbnail">
+				<img class="spotlight" src="http://hthfashionclub.weebly.com/uploads/1/2/4/7/12475808/2319795_orig.png" id="focus1">
+			</a>
+		</div>
+		<div class="col-md-6">
+			<a class="thumbnail">
+				<img class="spotlight" src="http://hthfashionclub.weebly.com/uploads/1/2/4/7/12475808/2319795_orig.png" id="focus2">
+			</a>
 		</div>
 	</div>
 
@@ -29,9 +27,9 @@
 		<!-- player loop function -->
 		<% for (var i = 0; i < players.length; i++) { %>
 		
-		<div class="col-xs-6 col-md-2" id=<%=i %> >
+		<div class="col-xs-6 col-md-2">
 			<a class="thumbnail">
-				<img src=<%=players[i].headshot %> >
+				<img src=<%=players[i].headshot %>>
 			</a>
 		</div>
 		<!-- loop close -->
@@ -39,6 +37,19 @@
 
 	</div>
 
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		var main = function() {
+			$('img').click(function() {
+				var current_pic = this.src;
+				$('.spotlight')[1].src = current_pic;
+			});
+		};
+
+		$(document).ready(main);
+
+	</script>
 
 </body>
 </html>

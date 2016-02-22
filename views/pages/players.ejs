@@ -9,12 +9,27 @@
 
 	<h1>Roster</h1>
 
+	<div class="spolight">
+		<div class="row">
+			<div class="col-md-6">
+				<a class="thumbnail">
+					<img src="..." id="focus1">
+				</a>
+			</div>
+			<div class="col-md-6">
+				<a class="thumbnail">
+					<img src="..." id="focus2">
+				</a>
+			</div>
+		</div>
+	</div>
+
 	<!-- thumbnails -->
 	<div class="row">
 		<!-- player loop function -->
 		<% for (var i = 0; i < players.length; i++) { %>
 		
-		<div class="col-xs-6 col-md-3">
+		<div class="col-xs-6 col-md-2" id=<%=i %> >
 			<a class="thumbnail">
 				<img src=<%=players[i].headshot %> >
 			</a>

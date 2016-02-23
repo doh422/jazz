@@ -43,7 +43,10 @@
 		var main = function() {
 			$('img').click(function() {
 				var current_pic = this.src;
-				$('.spotlight')[1].src = current_pic;
+				if ($('.spotlight')[0].src != current_pic) {
+					$('.spotlight')[1].src = $('.spotlight')[0].src;
+					$('.spotlight')[0].src = current_pic;
+				};
 			});
 		};
 

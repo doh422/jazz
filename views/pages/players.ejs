@@ -31,7 +31,7 @@
 			<a class="thumbnail">
 				<img src=<%=players[i].headshot %>>
 				<div class="caption">
-					<p><%=players[i].name %></p>
+					<p class="name"><%=players[i].name %></p>
 				</div>
 			</a>
 		</div>
@@ -50,6 +50,7 @@
 					$('.spotlight')[1].src = $('.spotlight')[0].src;
 					$('.spotlight')[0].src = current_pic;
 				};
+				console.log($('img').find('p'));
 			});
 		};
 

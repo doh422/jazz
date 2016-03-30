@@ -20,6 +20,10 @@ app.get('/players', function(req, res) {
 	});
 });
 
+app.get('/media', function(req, res) {
+	res.render('pages/media');
+});
+
 app.get('/create', function(req, res) {
 	res.render('pages/create');
 });

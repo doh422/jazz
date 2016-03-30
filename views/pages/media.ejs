@@ -16,7 +16,7 @@
 		// load iFrame player API asynchronously
 		var tag = document.createElement('script');
 
-		tag.scr = "https://www.youtube.com/iframe_api";
+		tag.src = "https://www.youtube.com/iframe_api";
 		var firstScriptTag = document.getElementsByTagName('script')[0];
 		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
@@ -26,7 +26,7 @@
 			player = new YT.Player('player', {
 				height: '390',
 				width: '640',
-				videoId: 'M71c1UVf-VE',
+				videoId: 'M7lc1UVf-VE',
 				events: {
 					'onReady': onPlayerReady,
 					'onStateChange': onPlayerStateChange
@@ -37,6 +37,7 @@
 		// api will call function when video player is ready
 		function onPlayerReady(event) {
 			event.target.playVideo();
+			console.log("it's working!");
 		}
 
 		// api calls below function when player's state changes
